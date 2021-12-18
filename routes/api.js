@@ -154,18 +154,6 @@ loghandler = {
                result 
            })
       })
-      router.get('/brainly', async (req, res, next) => {
-	      let query = req.query.query
-	      if (!query) return res.json(loghandler.notquery)
-	      let brainly = require('brainly-it')
-	      let result = brainly({'query': query}).then(result => {
-	      res.json({ 
-		       status: 200,
-		       creator: `${creator}`,
-               note: 'Jangan Di Tembak Bang',
-               result 
-           })
-      })
       router.get('/google', async (req, res, next) => {
 	      let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
